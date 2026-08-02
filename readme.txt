@@ -13,7 +13,7 @@ xset dpms force off       // turn screen off
 commands to do 
 py --list     shows intalls versions of pyton
 py -3.7 -m venv .venv maakt een venv met python 3.7
-python -m venv .venv
+sudo python3 -m venv --system-site-packages /usr/.env  // moet tegenwoordig
 . .venv/bin/activate     // sourced!!!
 pip install RPi.GPIO
 versie die we gaan gebruiken is 3
