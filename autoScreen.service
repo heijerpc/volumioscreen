@@ -2,7 +2,7 @@
 Description=Turn off/on screen using GPIO
 
 [Service]
-ExecStart=/home/volumio/volumioschreen/.venv/bin/python /home/volumio/volumioschreen/screen.py
+ExecStart=/home/volumio/volumioscreen/.venv/bin/python /home/volumio/volumioscreen/screen.py
 Environment=PYTHONUNBUFFERED=1 
 
 [Install]
