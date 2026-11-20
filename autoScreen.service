@@ -2,6 +2,12 @@
 Description=Turn off/on screen using GPIO
 
 [Service]
+User=volumio
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/volumio/.Xauthority
+# Wacht totdat de X-server van het DSI-scherm reageert op xset q
+ExecStartPre=/bin/bash -c 'until xset q >/dev/null 2>&1; do sleep 1; done'
+# start python script
 ExecStart=/home/volumio/volumioscreen/venv/bin/python /home/volumio/volumioscreen/screen.py
 Environment=PYTHONUNBUFFERED=1 
 
